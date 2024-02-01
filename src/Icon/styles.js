@@ -1,17 +1,10 @@
 import styled from "styled-components";
 
 import { inube } from "@inubekit/foundations";
-import { IIconProps } from ".";
 
 const filledAppearancesWithGrayIcon = ["gray", "light"];
 
-type AddDollarSign<T> = {
-  [K in keyof T as `$${string & K}`]: T[K];
-};
-
-export type IStyledIconProps = AddDollarSign<Omit<IIconProps, "icon">>;
-
-export const StyledIcon = styled.figure<IStyledIconProps>`
+export const StyledIcon = styled.figure`
   display: inline-block;
   padding: ${inube.spacing.s0};
   margin: ${inube.spacing.s0};
