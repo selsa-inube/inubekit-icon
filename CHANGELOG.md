@@ -1,3 +1,19 @@
+# v0.0.2 (Thu Feb 01 2024)
+
+#### 🐛 Bug Fix
+
+- implementation of `<Icon />` component [#1](https://github.com/selsa-inube/inubekit-icon/pull/1) ([@Andresbl123](https://github.com/Andresbl123))
+
+#### ⚠️ Pushed to `main`
+
+- Initial commit ([@Andresbl123](https://github.com/Andresbl123))
+
+#### Authors: 1
+
+- Andres ([@Andresbl123](https://github.com/Andresbl123))
+
+---
+
 # v0.0.1 (Wed Jan 17 2024)
 
 #### ⚠️ Pushed to `main`
