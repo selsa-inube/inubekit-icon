@@ -1,3 +1,20 @@
+# v1.0.1 (Fri Feb 02 2024)
+
+#### 🐛 Bug Fix
+
+- publish new version of @inubekit icon [#2](https://github.com/selsa-inube/inubekit-icon/pull/2) ([@Andresbl123](https://github.com/Andresbl123))
+
+#### ⚠️ Pushed to `main`
+
+- fix: adjust implementation in type definition (carlos3k11@gmail.com)
+
+#### Authors: 2
+
+- Andres ([@Andresbl123](https://github.com/Andresbl123))
+- Andres Babativa (carlos3k11@gmail.com)
+
+---
+
 # v0.0.2 (Thu Feb 01 2024)
 
 #### 🐛 Bug Fix
