@@ -21,7 +21,6 @@
     "dist/index.es.js",
     "dist/index.es.d.ts"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
