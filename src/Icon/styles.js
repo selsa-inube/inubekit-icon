@@ -15,10 +15,10 @@ export const StyledIcon = styled.figure`
     theme,
     $appearance,
     $parentHover,
-    $disabled,
+    disabled,
     $variant,
   }) => {
-    if ($disabled)
+    if (disabled)
       return (
         theme?.color?.stroke?.[$appearance]?.disabled ||
         inube.color.stroke[$appearance].disabled
@@ -39,10 +39,10 @@ export const StyledIcon = styled.figure`
     $variant,
     $appearance,
     $parentHover,
-    $disabled,
+    disabled,
   }) => {
     if ($variant === "filled") {
-      if ($disabled)
+      if (disabled)
         return (
           theme?.color?.surface?.[$appearance]?.disabled ||
           inube.color.surface[$appearance].disabled
@@ -59,8 +59,8 @@ export const StyledIcon = styled.figure`
     }
   }};
 
-  color: ${({ theme, $variant, $appearance, $parentHover, $disabled }) => {
-    if ($disabled)
+  color: ${({ theme, $variant, $appearance, $parentHover, disabled }) => {
+    if (disabled)
       return (
         theme?.color?.text?.[$appearance]?.disabled ||
         inube.color.text[$appearance].disabled
@@ -95,26 +95,26 @@ export const StyledIcon = styled.figure`
   }
 
   &:hover {
-    cursor: ${({ $cursorHover, $disabled, $variant }) => {
-      if (!$disabled && $cursorHover && $variant !== "filled") return "pointer";
+    cursor: ${({ $cursorHover, disabled, $variant }) => {
+      if (!disabled && $cursorHover && $variant !== "filled") return "pointer";
     }};
 
     border-color: ${({
       theme,
       $cursorHover,
       $appearance,
-      $disabled,
+      disabled,
       $variant,
     }) => {
-      if (!$disabled && $cursorHover && $variant !== "filled")
+      if (!disabled && $cursorHover && $variant !== "filled")
         return (
           theme?.color?.text?.[$appearance]?.hover ||
           inube.color.text[$appearance].hover
         );
     }};
 
-    color: ${({ theme, $cursorHover, $appearance, $disabled, $variant }) => {
-      if (!$disabled && $cursorHover && $variant !== "filled")
+    color: ${({ theme, $cursorHover, $appearance, disabled, $variant }) => {
+      if (!disabled && $cursorHover && $variant !== "filled")
         return (
           theme?.color?.stroke?.[$appearance]?.hover ||
           inube.color.stroke[$appearance].hover
@@ -126,9 +126,9 @@ export const StyledIcon = styled.figure`
       $variant,
       $appearance,
       $cursorHover,
-      $disabled,
+      disabled,
     }) => {
-      if (!$disabled && $variant === "filled" && $cursorHover)
+      if (!disabled && $variant === "filled" && $cursorHover)
         return (
           theme?.color?.surface?.[$appearance]?.hover ||
           inube.color.surface[$appearance].hover

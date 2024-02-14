@@ -1,4 +1,6 @@
 import { ThemeProvider } from "styled-components";
+import { action } from "@storybook/addon-actions";
+
 import { MdAdb } from "react-icons/md";
 
 import { Icon, IIconProps } from ".";
@@ -25,6 +27,7 @@ Default.args = {
   variant: "none",
   shape: "rectangle",
   size: "24px",
+  onClick: action("onClick"),
 };
 
 const theme = {

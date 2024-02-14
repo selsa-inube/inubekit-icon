@@ -1,3 +1,21 @@
+# v1.1.1 (Tue Feb 13 2024)
+
+#### 🐛 Bug Fix
+
+- Correct package post at @inubekit/icon [#3](https://github.com/selsa-inube/inubekit-icon/pull/3) ([@Andresbl123](https://github.com/Andresbl123))
+
+#### ⚠️ Pushed to `main`
+
+- refactor(Icon): update dependencies and external modules (carlos3k11@gmail.com)
+- refactor(Icon): refactor to fix disabled state bug (carlos3k11@gmail.com)
+
+#### Authors: 2
+
+- Andres ([@Andresbl123](https://github.com/Andresbl123))
+- Andres Babativa (carlos3k11@gmail.com)
+
+---
+
 # v1.0.1 (Fri Feb 02 2024)
 
 #### 🐛 Bug Fix

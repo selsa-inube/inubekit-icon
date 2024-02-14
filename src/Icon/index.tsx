@@ -33,12 +33,12 @@ export const Icon = (props: IIconProps) => {
       $appearance={appearance}
       $cursorHover={cursorHover}
       $parentHover={parentHover}
-      $disabled={disabled}
+      disabled={disabled}
       $spacing={spacing}
       $variant={variant}
       $shape={shape}
       $size={size}
-      $onClick={disabled ? undefined : onClick}
+      onClick={disabled ? undefined : onClick}
     >
       {icon}
     </StyledIcon>
