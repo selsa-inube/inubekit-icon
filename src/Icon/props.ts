@@ -11,19 +11,18 @@ export type Variant = (typeof variants)[number];
 
 const appearances = [
   "primary",
-  "error",
-  "warning",
   "success",
-  "information",
+  "warning",
+  "danger",
   "help",
-  "light",
-  "gray",
   "dark",
+  "gray",
+  "light",
 ] as const;
 
 export type Appearance = (typeof appearances)[number];
 
-const parameters = {
+export const parameters = {
   docs: {
     description: {
       component: "Icons used to communicate actions and decisions graphically",
@@ -31,9 +30,9 @@ const parameters = {
   },
 };
 
-const props = {
+export const props = {
   appearance: {
-    options: Object.keys(inube.color.text),
+    options: Object.keys(inube.icon.filled),
     control: { type: "select" },
     description: "the base styling to apply to the icon",
     table: {
@@ -110,5 +109,3 @@ const props = {
     description: "size of the icon in pixels",
   },
 };
-
-export { props, parameters };
