@@ -1,12 +1,9 @@
-import { ThemeProvider } from "styled-components";
-import { action } from "@storybook/addon-actions";
-
 import { MdAdb } from "react-icons/md";
+import { action } from "@storybook/addon-actions";
 
 import { Icon, IIconProps } from ".";
 
 import { props, parameters } from "./props";
-import { presente } from "@inubekit/foundations";
 
 const story = {
   title: "data/Icon",
@@ -28,20 +25,6 @@ Default.args = {
   shape: "rectangle",
   size: "24px",
   onClick: action("onClick"),
-};
-
-const theme = {
-  ...presente,
-};
-
-export const Themed = (args: IIconProps) => (
-  <ThemeProvider theme={theme}>
-    <Icon {...args} />
-  </ThemeProvider>
-);
-
-Themed.args = {
-  ...Default.args,
 };
 
 export default story;
