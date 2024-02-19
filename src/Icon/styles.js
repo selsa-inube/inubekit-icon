@@ -120,8 +120,8 @@ export const StyledIcon = styled.figure`
     color: ${({ theme, $cursorHover, $appearance, disabled, $variant }) => {
       if (!disabled && $cursorHover && $variant !== "filled")
         return (
-          theme?.icon?.node?.[$appearance]?.content?.color?.hover ||
-          inube.icon.node[$appearance].content.color.hover
+          theme?.icon?.none?.[$appearance]?.content?.color?.hover ||
+          inube.icon.none[$appearance].content.color.hover
         );
     }};
 
