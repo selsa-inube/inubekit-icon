@@ -32,7 +32,7 @@ export const parameters = {
 
 export const props = {
   appearance: {
-    options: Object.keys(inube.icon.filled),
+    options: Object.keys(inube.icon),
     control: { type: "select" },
     description: "the base styling to apply to the icon",
     table: {
