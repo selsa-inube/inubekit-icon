@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 import { inube } from "@inubekit/foundations";
 
-const filledAppearancesWithGrayIcon = ["gray", "light"];
-
 export const StyledIcon = styled.figure`
   display: inline-block;
   padding: 0px;
@@ -76,14 +74,9 @@ export const StyledIcon = styled.figure`
         inube.icon[$appearance].content.color.regular
       );
     }
-    if (!filledAppearancesWithGrayIcon.includes($appearance))
-      return (
-        theme?.icon?.light?.content?.color?.regular ||
-        inube.icon.light.content.color.regular
-      );
     return (
-      theme?.icon?.gray?.contrast?.color?.regular ||
-      inube.icon.gray.contrast.color.regular
+      theme?.icon?.[$appearance]?.contrast?.color?.regular ||
+      inube.icon[$appearance].contrast.color.regular
     );
   }};
 
