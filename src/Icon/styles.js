@@ -44,17 +44,17 @@ export const StyledIcon = styled.figure`
     if ($variant === "filled") {
       if (disabled)
         return (
-          theme?.icon?.[$appearance]?.content?.color?.disabled ||
-          inube.icon[$appearance].content.color.disabled
+          theme?.icon?.[$appearance]?.background?.color?.disabled ||
+          inube.icon[$appearance].background.color.disabled
         );
       if ($parentHover)
         return (
-          theme?.icon?.[$appearance]?.content?.color?.hover ||
-          inube.icon[$appearance].content.color.hover
+          theme?.icon?.[$appearance]?.background?.color?.hover ||
+          inube.icon[$appearance].background.color.hover
         );
       return (
-        theme?.icon?.[$appearance]?.content?.color?.regular ||
-        inube.icon[$appearance].content.color.regular
+        theme?.icon?.[$appearance]?.background?.color?.regular ||
+        inube.icon[$appearance].background.color.regular
       );
     }
   }};
@@ -134,8 +134,8 @@ export const StyledIcon = styled.figure`
     }) => {
       if (!disabled && $variant === "filled" && $cursorHover)
         return (
-          theme?.icon?.[$appearance]?.content?.color?.hover ||
-          inube.icon[$appearance].content.color.hover
+          theme?.icon?.[$appearance]?.background?.color?.hover ||
+          inube.icon[$appearance].background.color.hover
         );
     }};
   }
