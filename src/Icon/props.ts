@@ -9,21 +9,11 @@ export type Spacing = (typeof spacings)[number];
 export const variants = ["filled", "outlined", "none"] as const;
 export type Variant = (typeof variants)[number];
 
-const appearances = [
-  "primary",
-  "error",
-  "warning",
-  "success",
-  "information",
-  "help",
-  "light",
-  "gray",
-  "dark",
-] as const;
+const appearances = Object.keys(inube.icon);
 
 export type Appearance = (typeof appearances)[number];
 
-const parameters = {
+export const parameters = {
   docs: {
     description: {
       component: "Icons used to communicate actions and decisions graphically",
@@ -31,9 +21,9 @@ const parameters = {
   },
 };
 
-const props = {
+export const props = {
   appearance: {
-    options: Object.keys(inube.color.text),
+    options: appearances,
     control: { type: "select" },
     description: "the base styling to apply to the icon",
     table: {
@@ -110,5 +100,3 @@ const props = {
     description: "size of the icon in pixels",
   },
 };
-
-export { props, parameters };

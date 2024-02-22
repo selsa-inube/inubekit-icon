@@ -34,13 +34,10 @@
     "version": "rm -rf dist && npm run build",
     "postversion": "git push --follow-tags && npm run auto release"
   },
-  "dependencies": {
-    "@inubekit/foundations": "^1.1.2"
-  },
   "peerDependencies": {
-    "react-icons": "^5.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
@@ -74,5 +71,8 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@inubekit/foundations": "^2.2.1"
   }
 }

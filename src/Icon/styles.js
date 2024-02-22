@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 import { inube } from "@inubekit/foundations";
 
-const filledAppearancesWithGrayIcon = ["gray", "light"];
-
 export const StyledIcon = styled.figure`
   display: inline-block;
-  padding: ${inube.spacing.s0};
-  margin: ${inube.spacing.s0};
+  padding: 0px;
+  margin: 0px;
   border-radius: ${({ $shape }) => ($shape === "circle" ? "50%" : "8px")};
   border-width: ${({ $variant }) => ($variant === "outlined" ? "1px" : "0px")};
   border-style: solid;
@@ -20,17 +18,17 @@ export const StyledIcon = styled.figure`
   }) => {
     if (disabled)
       return (
-        theme?.color?.stroke?.[$appearance]?.disabled ||
-        inube.color.stroke[$appearance].disabled
+        theme?.icon?.[$appearance]?.content?.color?.disabled ||
+        inube.icon[$appearance].content.color.disabled
       );
     if ($parentHover && $variant !== "filled")
       return (
-        theme?.color?.stroke?.[$appearance]?.hover ||
-        inube.color.stroke[$appearance].hover
+        theme?.icon?.[$appearance]?.content?.color?.hover ||
+        inube.icon[$appearance].content.color.hover
       );
     return (
-      theme?.color?.stroke?.[$appearance]?.regular ||
-      inube.color.stroke[$appearance].regular
+      theme?.icon?.[$appearance]?.content?.color?.regular ||
+      inube.icon[$appearance].content.color.regular
     );
   }};
 
@@ -44,17 +42,17 @@ export const StyledIcon = styled.figure`
     if ($variant === "filled") {
       if (disabled)
         return (
-          theme?.color?.surface?.[$appearance]?.disabled ||
-          inube.color.surface[$appearance].disabled
+          theme?.icon?.[$appearance]?.background?.color?.disabled ||
+          inube.icon[$appearance].background.color.disabled
         );
       if ($parentHover)
         return (
-          theme?.color?.surface?.[$appearance]?.hover ||
-          inube.color.surface[$appearance].hover
+          theme?.icon?.[$appearance]?.background?.color?.hover ||
+          inube.icon[$appearance].background.color.hover
         );
       return (
-        theme?.color?.surface?.[$appearance]?.regular ||
-        inube.color.surface[$appearance].regular
+        theme?.icon?.[$appearance]?.background?.color?.regular ||
+        inube.icon[$appearance].background.color.regular
       );
     }
   }};
@@ -62,25 +60,24 @@ export const StyledIcon = styled.figure`
   color: ${({ theme, $variant, $appearance, $parentHover, disabled }) => {
     if (disabled)
       return (
-        theme?.color?.text?.[$appearance]?.disabled ||
-        inube.color.text[$appearance].disabled
+        theme?.icon?.[$appearance]?.contrast?.color?.disabled ||
+        inube.icon[$appearance].contrast.color.disabled
       );
     if ($variant !== "filled") {
       if ($parentHover)
         return (
-          theme?.color?.text?.[$appearance]?.hover ||
-          inube.color.text[$appearance].hover
+          theme?.icon?.[$appearance]?.content?.color?.hover ||
+          inube.icon[$appearance].content.color.hover
         );
       return (
-        theme?.color?.text?.[$appearance]?.regular ||
-        inube.color.text[$appearance].regular
+        theme?.icon?.[$appearance]?.content?.color?.regular ||
+        inube.icon[$appearance].content.color.regular
       );
     }
-    if (!filledAppearancesWithGrayIcon.includes($appearance))
-      return (
-        theme?.color?.text?.light?.regular || inube.color.text.light.regular
-      );
-    return theme?.color?.text?.gray?.regular || inube.color.text.gray.regular;
+    return (
+      theme?.icon?.[$appearance]?.contrast?.color?.regular ||
+      inube.icon[$appearance].contrast.color.regular
+    );
   }};
 
   & svg {
@@ -88,9 +85,9 @@ export const StyledIcon = styled.figure`
     width: ${({ $size }) => $size};
     height: ${({ $size }) => $size};
     padding: ${({ $spacing }) => {
-      if ($spacing === "wide") return inube.spacing.s100;
-      if ($spacing === "compact") return inube.spacing.s050;
-      return inube.spacing.s025;
+      if ($spacing === "wide") return "8px";
+      if ($spacing === "compact") return "4px";
+      return "2px";
     }};
   }
 
@@ -108,16 +105,16 @@ export const StyledIcon = styled.figure`
     }) => {
       if (!disabled && $cursorHover && $variant !== "filled")
         return (
-          theme?.color?.text?.[$appearance]?.hover ||
-          inube.color.text[$appearance].hover
+          theme?.icon?.[$appearance]?.content?.color?.hover ||
+          inube.icon[$appearance].content.color.hover
         );
     }};
 
     color: ${({ theme, $cursorHover, $appearance, disabled, $variant }) => {
       if (!disabled && $cursorHover && $variant !== "filled")
         return (
-          theme?.color?.stroke?.[$appearance]?.hover ||
-          inube.color.stroke[$appearance].hover
+          theme?.icon?.[$appearance]?.content?.color?.hover ||
+          inube.icon[$appearance].content.color.hover
         );
     }};
 
@@ -130,8 +127,8 @@ export const StyledIcon = styled.figure`
     }) => {
       if (!disabled && $variant === "filled" && $cursorHover)
         return (
-          theme?.color?.surface?.[$appearance]?.hover ||
-          inube.color.surface[$appearance].hover
+          theme?.icon?.[$appearance]?.background?.color?.hover ||
+          inube.icon[$appearance].background.color.hover
         );
     }};
   }
