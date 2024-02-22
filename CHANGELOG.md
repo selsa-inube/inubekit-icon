@@ -1,3 +1,21 @@
+# v1.2.0 (Thu Feb 22 2024)
+
+#### 🚀 Enhancement
+
+- Implement new version of `@inubekit/foundations` `<Icon> [#6](https://github.com/selsa-inube/inubekit-icon/pull/6) ([@Andresbl123](https://github.com/Andresbl123) [@cmarin001](https://github.com/cmarin001))
+
+#### 🐛 Bug Fix
+
+- add `@inubekit/foundations` dependency [#5](https://github.com/selsa-inube/inubekit-icon/pull/5) ([@Andresbl123](https://github.com/Andresbl123))
+- Adjust props passed to styled components in `<Icon />` [#4](https://github.com/selsa-inube/inubekit-icon/pull/4) ([@Andresbl123](https://github.com/Andresbl123))
+
+#### Authors: 2
+
+- Andres ([@Andresbl123](https://github.com/Andresbl123))
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.1.1 (Tue Feb 13 2024)
 
 #### 🐛 Bug Fix
