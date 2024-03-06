@@ -1,19 +1,26 @@
-import { inube } from "@inubekit/foundations";
+const shapes = ["circle", "rectangle"] as const;
+type Shape = (typeof shapes)[number];
 
-export const shapes = ["circle", "rectangle"] as const;
-export type Shape = (typeof shapes)[number];
+const spacings = ["none", "compact", "wide"] as const;
+type Spacing = (typeof spacings)[number];
 
-export const spacings = ["none", "compact", "wide"] as const;
-export type Spacing = (typeof spacings)[number];
+const variants = ["filled", "outlined", "none"] as const;
+type Variant = (typeof variants)[number];
 
-export const variants = ["filled", "outlined", "none"] as const;
-export type Variant = (typeof variants)[number];
+const appearances = [
+  "primary",
+  "success",
+  "warning",
+  "danger",
+  "help",
+  "dark",
+  "gray",
+  "light",
+] as const;
 
-const appearances = Object.keys(inube.icon);
+type Appearance = (typeof appearances)[number];
 
-export type Appearance = (typeof appearances)[number];
-
-export const parameters = {
+const parameters = {
   docs: {
     description: {
       component: "Icons used to communicate actions and decisions graphically",
@@ -21,7 +28,7 @@ export const parameters = {
   },
 };
 
-export const props = {
+const props = {
   appearance: {
     options: appearances,
     control: { type: "select" },
@@ -100,3 +107,6 @@ export const props = {
     description: "size of the icon in pixels",
   },
 };
+
+export { parameters, props, shapes, spacings, variants };
+export type { Appearance, Shape, Spacing, Variant };

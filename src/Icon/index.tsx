@@ -1,7 +1,7 @@
 import { StyledIcon } from "./styles";
 import { Spacing, Variant, Shape, Appearance } from "./props";
 
-export interface IIconProps {
+interface IIcon {
   appearance: Appearance;
   cursorHover?: boolean;
   parentHover?: boolean;
@@ -14,7 +14,7 @@ export interface IIconProps {
   onClick?: () => void;
 }
 
-export const Icon = (props: IIconProps) => {
+const Icon = (props: IIcon) => {
   const {
     appearance,
     cursorHover,
@@ -44,3 +44,6 @@ export const Icon = (props: IIconProps) => {
     </StyledIcon>
   );
 };
+
+export { Icon };
+export type { IIcon };
