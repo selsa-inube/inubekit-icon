@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { inube } from "@inubekit/foundations";
 
-export const StyledIcon = styled.figure`
+const StyledIcon = styled.figure`
   display: inline-block;
   padding: 0px;
   margin: 0px;
@@ -133,3 +133,4 @@ export const StyledIcon = styled.figure`
     }};
   }
 `;
+export { StyledIcon };

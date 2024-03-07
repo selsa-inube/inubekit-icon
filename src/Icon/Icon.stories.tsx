@@ -1,7 +1,7 @@
 import { MdAdb } from "react-icons/md";
 import { action } from "@storybook/addon-actions";
 
-import { Icon, IIconProps } from ".";
+import { Icon, IIcon } from ".";
 
 import { props, parameters } from "./props";
 
@@ -12,8 +12,7 @@ const story = {
   argTypes: props,
 };
 
-export const Default = (args: IIconProps) => <Icon {...args} />;
-
+const Default = (args: IIcon) => <Icon {...args} />;
 Default.args = {
   appearance: "primary",
   icon: <MdAdb />,
@@ -27,4 +26,5 @@ Default.args = {
   onClick: action("onClick"),
 };
 
+export { Default };
 export default story;
