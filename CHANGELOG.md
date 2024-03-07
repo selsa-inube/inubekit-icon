@@ -1,3 +1,15 @@
+# v1.3.0 (Thu Mar 07 2024)
+
+#### 🚀 Enhancement
+
+- Refactor appearance prop so it isn't of type string, but type "primary" | "warning" | ... [#8](https://github.com/selsa-inube/inubekit-icon/pull/8) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.2.0 (Thu Feb 22 2024)
 
 #### 🚀 Enhancement
