@@ -11,7 +11,7 @@ interface IIcon {
   variant?: Variant;
   shape?: Shape;
   size?: string;
-  onClick?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 const Icon = (props: IIcon) => {
@@ -28,7 +28,7 @@ const Icon = (props: IIcon) => {
     onClick,
   } = props;
 
-  const interceptonClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const interceptOnClick = (e: React.MouseEvent) => {
     try {
       onClick && onClick(e);
     } catch (error) {
@@ -50,7 +50,7 @@ const Icon = (props: IIcon) => {
       $variant={variant}
       $shape={shape}
       $size={size}
-      onClick={interceptonClick}
+      onClick={interceptOnClick}
     >
       {icon}
     </StyledIcon>
