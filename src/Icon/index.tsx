@@ -11,7 +11,7 @@ interface IIcon {
   variant?: Variant;
   shape?: Shape;
   size?: string;
-  onClick?: () => void;
+  onClick?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Icon = (props: IIcon) => {
@@ -28,6 +28,18 @@ const Icon = (props: IIcon) => {
     onClick,
   } = props;
 
+  const interceptonClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    try {
+      onClick && onClick(e);
+    } catch (error) {
+      if (error instanceof Error) {
+        throw new Error(error.message);
+      } else {
+        throw new Error("An unknown error occurred");
+      }
+    }
+  };
+
   return (
     <StyledIcon
       $appearance={appearance}
@@ -38,7 +50,7 @@ const Icon = (props: IIcon) => {
       $variant={variant}
       $shape={shape}
       $size={size}
-      onClick={disabled ? undefined : onClick}
+      onClick={interceptonClick}
     >
       {icon}
     </StyledIcon>
