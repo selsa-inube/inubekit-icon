@@ -50,7 +50,7 @@ const Icon = (props: IIcon) => {
       $variant={variant}
       $shape={shape}
       $size={size}
-      onClick={interceptOnClick}
+      onClick={disabled ? undefined : interceptOnClick}
     >
       {icon}
     </StyledIcon>
