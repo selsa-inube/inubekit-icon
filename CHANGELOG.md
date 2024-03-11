@@ -1,3 +1,20 @@
+# v1.4.0 (Mon Mar 11 2024)
+
+#### 🚀 Enhancement
+
+- Implement try..catch in props of type function [#10](https://github.com/selsa-inube/inubekit-icon/pull/10) ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+#### 📝 Documentation
+
+- Release new version 1.3.0 [#9](https://github.com/selsa-inube/inubekit-icon/pull/9) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 2
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+- Januar Asprilla  ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+---
+
 # v1.3.0 (Thu Mar 07 2024)
 
 #### 🚀 Enhancement
