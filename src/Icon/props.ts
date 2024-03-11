@@ -34,7 +34,7 @@ const props = {
     control: { type: "select" },
     description: "the base styling to apply to the icon",
     table: {
-      defaultValue: { summary: "black" },
+      defaultValue: { summary: "primary" },
     },
   },
 
