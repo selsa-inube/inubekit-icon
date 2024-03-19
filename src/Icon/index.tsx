@@ -1,15 +1,20 @@
 import { StyledIcon } from "./styles";
-import { Spacing, Variant, Shape, Appearance } from "./props";
+import {
+  IIconAppearance,
+  IIconShape,
+  IIconSpacing,
+  IIconVariant,
+} from "./props";
 
 interface IIcon {
-  appearance: Appearance;
+  appearance: IIconAppearance;
   cursorHover?: boolean;
   parentHover?: boolean;
   icon: React.ReactNode;
   disabled?: boolean;
-  spacing?: Spacing;
-  variant?: Variant;
-  shape?: Shape;
+  spacing?: IIconSpacing;
+  variant?: IIconVariant;
+  shape?: IIconShape;
   size?: string;
   onClick?: (e: React.MouseEvent) => void;
 }
