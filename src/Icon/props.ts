@@ -1,11 +1,11 @@
 const shapes = ["circle", "rectangle"] as const;
-type Shape = (typeof shapes)[number];
+type IIconShape = (typeof shapes)[number];
 
 const spacings = ["none", "compact", "wide"] as const;
-type Spacing = (typeof spacings)[number];
+type IIconSpacing = (typeof spacings)[number];
 
 const variants = ["filled", "outlined", "none"] as const;
-type Variant = (typeof variants)[number];
+type IIconVariant = (typeof variants)[number];
 
 const appearances = [
   "primary",
@@ -18,7 +18,7 @@ const appearances = [
   "light",
 ] as const;
 
-type Appearance = (typeof appearances)[number];
+type IIconAppearance = (typeof appearances)[number];
 
 const parameters = {
   docs: {
@@ -109,4 +109,4 @@ const props = {
 };
 
 export { parameters, props, shapes, spacings, variants };
-export type { Appearance, Shape, Spacing, Variant };
+export type { IIconAppearance, IIconShape, IIconSpacing, IIconVariant };
