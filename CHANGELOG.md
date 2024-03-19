@@ -1,3 +1,20 @@
+# v1.5.0 (Tue Mar 19 2024)
+
+#### 🚀 Enhancement
+
+- Adjust and export interfaces [#12](https://github.com/selsa-inube/inubekit-icon/pull/12) ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+#### 📝 Documentation
+
+- Publish new version 1.4.0 [#11](https://github.com/selsa-inube/inubekit-icon/pull/11) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 2
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+- Januar Asprilla  ([@JanuarAsprilla](https://github.com/JanuarAsprilla))
+
+---
+
 # v1.4.0 (Mon Mar 11 2024)
 
 #### 🚀 Enhancement
