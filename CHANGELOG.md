@@ -1,3 +1,23 @@
+# v1.5.1 (Thu Apr 04 2024)
+
+#### 🐛 Bug Fix
+
+- Add auto publish [#15](https://github.com/selsa-inube/inubekit-icon/pull/15) ([@cmarin001](https://github.com/cmarin001))
+
+#### 📝 Documentation
+
+- Publish new version 1.5.0 [#13](https://github.com/selsa-inube/inubekit-icon/pull/13) ([@cmarin001](https://github.com/cmarin001))
+
+#### 🔩 Dependency Updates
+
+- Update inubekit/icon to storybook v8 [#14](https://github.com/selsa-inube/inubekit-icon/pull/14) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.5.0 (Tue Mar 19 2024)
 
 #### 🚀 Enhancement
