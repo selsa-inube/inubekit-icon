@@ -1,3 +1,15 @@
+# v1.7.0 (Thu Jun 27 2024)
+
+#### 🚀 Enhancement
+
+- Adjust Padding on Variant None [#17](https://github.com/selsa-inube/inubekit-icon/pull/17) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.6.0 (Tue Apr 30 2024)
 
 #### 🚀 Enhancement
