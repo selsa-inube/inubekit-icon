@@ -84,7 +84,8 @@ const StyledIcon = styled.figure`
     display: block;
     width: ${({ $size }) => $size};
     height: ${({ $size }) => $size};
-    padding: ${({ $spacing }) => {
+    padding: ${({ $spacing, $variant }) => {
+      if ($spacing === "none" && $variant === "none") return "0px";
       if ($spacing === "wide") return "8px";
       if ($spacing === "compact") return "4px";
       return "2px";
