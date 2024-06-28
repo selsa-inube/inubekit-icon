@@ -1,3 +1,15 @@
+# v1.8.0 (Fri Jun 28 2024)
+
+#### 🚀 Enhancement
+
+- Adjustment: Include 'None' as Default for Variant [#18](https://github.com/selsa-inube/inubekit-icon/pull/18) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.7.0 (Thu Jun 27 2024)
 
 #### 🚀 Enhancement
