@@ -27,7 +27,7 @@ const Icon = (props: IIcon) => {
     icon,
     disabled,
     spacing,
-    variant,
+    variant = "none",
     shape,
     size,
     onClick,
