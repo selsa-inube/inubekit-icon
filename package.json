@@ -40,7 +40,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@inubekit/foundations": "^5.0.0"
+    "@inubekit/foundations": "^5.1.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
