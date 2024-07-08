@@ -1,3 +1,15 @@
+# v1.9.0 (Mon Jul 08 2024)
+
+#### 🚀 Enhancement
+
+- Update foundations dependencies [#19](https://github.com/selsa-inube/inubekit-icon/pull/19) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v1.8.0 (Fri Jun 28 2024)
 
 #### 🚀 Enhancement
