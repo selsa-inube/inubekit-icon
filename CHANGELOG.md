@@ -1,3 +1,15 @@
+# v2.0.0 (Wed Jul 17 2024)
+
+#### 💥 Breaking Change
+
+- feat: adjust values in spacing and variant props [#21](https://github.com/selsa-inube/inubekit-icon/pull/21) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v1.9.0 (Mon Jul 08 2024)
 
 #### 🚀 Enhancement
