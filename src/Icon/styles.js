@@ -6,65 +6,83 @@ const StyledIcon = styled.figure`
   display: inline-block;
   padding: 0px;
   margin: 0px;
-  border-radius: ${({ $shape }) => ($shape === "circle" ? "50%" : "8px")};
-  border-width: ${({ $variant }) => ($variant === "outlined" ? "1px" : "0px")};
-  border-style: solid;
-  border-color: ${({
-    theme,
-    $appearance,
-    $parentHover,
-    disabled,
-    $variant,
-  }) => {
-    if (disabled)
-      return (
-        theme?.icon?.[$appearance]?.content?.color?.disabled ||
-        inube.icon[$appearance].content.color.disabled
-      );
-    if ($parentHover && $variant !== "filled")
-      return (
-        theme?.icon?.[$appearance]?.content?.color?.hover ||
-        inube.icon[$appearance].content.color.hover
-      );
-    return (
-      theme?.icon?.[$appearance]?.content?.color?.regular ||
-      inube.icon[$appearance].content.color.regular
-    );
-  }};
 
-  background-color: ${({
-    theme,
-    $variant,
-    $appearance,
-    $parentHover,
-    disabled,
-  }) => {
-    if ($variant === "filled") {
+  & svg {
+    display: block;
+    box-sizing: border-box;
+    width: ${({ $size }) => $size};
+    height: ${({ $size }) => $size};
+    padding: ${({ $spacing }) => {
+      if ($spacing === "wide") return "4px";
+      if ($spacing === "compact") return "2px";
+      return "0px";
+    }};
+
+    color: ${({ theme, $variant, $appearance, $parentHover, disabled }) => {
       if (disabled)
         return (
-          theme?.icon?.[$appearance]?.background?.color?.disabled ||
-          inube.icon[$appearance].background.color.disabled
+          theme?.icon?.[$appearance]?.contrast?.color?.disabled ||
+          inube.icon[$appearance].contrast.color.disabled
         );
-      if ($parentHover)
+      if ($variant !== "filled") {
+        if ($parentHover)
+          return (
+            theme?.icon?.[$appearance]?.content?.color?.hover ||
+            inube.icon[$appearance].content.color.hover
+          );
         return (
-          theme?.icon?.[$appearance]?.background?.color?.hover ||
-          inube.icon[$appearance].background.color.hover
+          theme?.icon?.[$appearance]?.content?.color?.regular ||
+          inube.icon[$appearance].content.color.regular
         );
+      }
       return (
-        theme?.icon?.[$appearance]?.background?.color?.regular ||
-        inube.icon[$appearance].background.color.regular
+        theme?.icon?.[$appearance]?.contrast?.color?.regular ||
+        inube.icon[$appearance].contrast.color.regular
       );
-    }
-  }};
+    }};
 
-  color: ${({ theme, $variant, $appearance, $parentHover, disabled }) => {
-    if (disabled)
-      return (
-        theme?.icon?.[$appearance]?.contrast?.color?.disabled ||
-        inube.icon[$appearance].contrast.color.disabled
-      );
-    if ($variant !== "filled") {
-      if ($parentHover)
+    background-color: ${({
+      theme,
+      $variant,
+      $appearance,
+      $parentHover,
+      disabled,
+    }) => {
+      if ($variant === "filled") {
+        if (disabled)
+          return (
+            theme?.icon?.[$appearance]?.background?.color?.disabled ||
+            inube.icon[$appearance].background.color.disabled
+          );
+        if ($parentHover)
+          return (
+            theme?.icon?.[$appearance]?.background?.color?.hover ||
+            inube.icon[$appearance].background.color.hover
+          );
+        return (
+          theme?.icon?.[$appearance]?.background?.color?.regular ||
+          inube.icon[$appearance].background.color.regular
+        );
+      }
+    }};
+
+    border-radius: ${({ $shape }) => ($shape === "circle" ? "50%" : "4px")};
+    border-width: ${({ $variant }) =>
+      $variant === "outlined" ? "1px" : "0px"};
+    border-style: solid;
+    border-color: ${({
+      theme,
+      $appearance,
+      $parentHover,
+      disabled,
+      $variant,
+    }) => {
+      if (disabled)
+        return (
+          theme?.icon?.[$appearance]?.content?.color?.disabled ||
+          inube.icon[$appearance].content.color.disabled
+        );
+      if ($parentHover && $variant !== "filled")
         return (
           theme?.icon?.[$appearance]?.content?.color?.hover ||
           inube.icon[$appearance].content.color.hover
@@ -73,26 +91,10 @@ const StyledIcon = styled.figure`
         theme?.icon?.[$appearance]?.content?.color?.regular ||
         inube.icon[$appearance].content.color.regular
       );
-    }
-    return (
-      theme?.icon?.[$appearance]?.contrast?.color?.regular ||
-      inube.icon[$appearance].contrast.color.regular
-    );
-  }};
-
-  & svg {
-    display: block;
-    width: ${({ $size }) => $size};
-    height: ${({ $size }) => $size};
-    padding: ${({ $spacing, $variant }) => {
-      if ($spacing === "none" && $variant === "none") return "0px";
-      if ($spacing === "wide") return "8px";
-      if ($spacing === "compact") return "4px";
-      return "2px";
     }};
   }
 
-  &:hover {
+  & svg:hover {
     cursor: ${({ $cursorHover, disabled, $variant }) => {
       if (!disabled && $cursorHover && $variant !== "filled") return "pointer";
     }};

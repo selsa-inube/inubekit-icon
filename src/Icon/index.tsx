@@ -29,7 +29,7 @@ const Icon = (props: IIcon) => {
     spacing,
     variant = "none",
     shape,
-    size,
+    size = "24px",
     onClick,
   } = props;
 
