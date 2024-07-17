@@ -1,10 +1,10 @@
 const shapes = ["circle", "rectangle"] as const;
 type IIconShape = (typeof shapes)[number];
 
-const spacings = ["none", "compact", "wide"] as const;
+const spacings = ["narrow", "compact", "wide"] as const;
 type IIconSpacing = (typeof spacings)[number];
 
-const variants = ["filled", "outlined", "none"] as const;
+const variants = ["filled", "outlined", "empty"] as const;
 type IIconVariant = (typeof variants)[number];
 
 const appearances = [
