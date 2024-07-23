@@ -1,3 +1,15 @@
+# v2.0.1 (Tue Jul 23 2024)
+
+#### 🐛 Bug Fix
+
+- fix: increase padding in wide and compact spacings [#22](https://github.com/selsa-inube/inubekit-icon/pull/22) ([@wfercanas](https://github.com/wfercanas))
+
+#### Authors: 1
+
+- Fernando Cañas ([@wfercanas](https://github.com/wfercanas))
+
+---
+
 # v2.0.0 (Wed Jul 17 2024)
 
 #### 💥 Breaking Change
