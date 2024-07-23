@@ -13,8 +13,8 @@ const StyledIcon = styled.figure`
     width: ${({ $size }) => $size};
     height: ${({ $size }) => $size};
     padding: ${({ $spacing }) => {
-      if ($spacing === "wide") return "4px";
-      if ($spacing === "compact") return "2px";
+      if ($spacing === "wide") return "8px";
+      if ($spacing === "compact") return "4px";
       return "0px";
     }};
 
@@ -66,7 +66,7 @@ const StyledIcon = styled.figure`
       }
     }};
 
-    border-radius: ${({ $shape }) => ($shape === "circle" ? "50%" : "4px")};
+    border-radius: ${({ $shape }) => ($shape === "circle" ? "50%" : "8px")};
     border-width: ${({ $variant }) =>
       $variant === "outlined" ? "1px" : "0px"};
     border-style: solid;
