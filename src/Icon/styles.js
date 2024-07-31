@@ -7,7 +7,7 @@ const StyledIcon = styled.figure`
   padding: 0px;
   margin: 0px;
 
-  & svg {
+  & > svg {
     display: block;
     box-sizing: border-box;
     width: ${({ $size }) => $size};
@@ -94,7 +94,7 @@ const StyledIcon = styled.figure`
     }};
   }
 
-  & svg:hover {
+  & > svg:hover {
     cursor: ${({ $cursorHover, disabled, $variant }) => {
       if (!disabled && $cursorHover && $variant !== "filled") return "pointer";
     }};
