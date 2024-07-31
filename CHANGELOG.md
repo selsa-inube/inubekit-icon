@@ -1,3 +1,15 @@
+# v2.0.2 (Wed Jul 31 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update styles in order to avoid misused of svg ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.0.1 (Tue Jul 23 2024)
 
 #### 🐛 Bug Fix
