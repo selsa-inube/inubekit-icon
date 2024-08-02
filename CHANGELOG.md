@@ -1,3 +1,16 @@
+# v2.0.6 (Fri Aug 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update update-foundations.yml in order to set the branch ([@cmarin001](https://github.com/cmarin001))
+- Update update-foundations.yml in order to include PR strategy ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.0.5 (Fri Aug 02 2024)
 
 #### ⚠️ Pushed to `main`
