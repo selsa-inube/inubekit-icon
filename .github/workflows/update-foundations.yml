@@ -19,17 +19,23 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Update Foundations Dependency
-        run: npm install @inubekit/foundations@latest --save
-
-      - name: Commit and Push Changes
+      - name: Checkout Branch
         run: |
           git config --global user.email "cmarin6051@gmail.com"
           git config --global user.name "cmarin001"
           git checkout -b cmarin/update-foundations-dependency
-          git add package.json
+
+      - name: Update Foundations Dependency
+        run: npm install @inubekit/foundations@latest --save
+
+      - name: Verify Update
+        run: cat package.json
+
+      - name: Commit and Push Changes
+        run: |
+          git add package.json package-lock.json
           git commit -m "chore(dependencies): update foundations to latest version"
-          git push origin cmarin/update-foundations-dependency
+          git push origin cmarin/update-foundations-dependency --force
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
