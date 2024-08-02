@@ -29,6 +29,7 @@ jobs:
           git checkout -b cmarin/update-foundations-dependency
           git add package.json
           git commit -m "chore(dependencies): update foundations to latest version"
+          git pull origin main --rebase
           git push origin cmarin/update-foundations-dependency
 
       - name: Create Pull Request
