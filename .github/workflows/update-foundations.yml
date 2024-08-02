@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Update Foundations Dependency
-        run: npm install @inubekit/foundations@latest
+        run: npm install @inubekit/foundations@latest --save
 
       - name: Commit and Push Changes
         run: |
