@@ -1,3 +1,15 @@
+# v2.0.3 (Fri Aug 02 2024)
+
+#### ⚠️ Pushed to `main`
+
+- feat(githubActions): update in order to include update-foundations ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.0.2 (Wed Jul 31 2024)
 
 #### ⚠️ Pushed to `main`
