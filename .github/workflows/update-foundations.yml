@@ -27,6 +27,7 @@ jobs:
           git config --global user.email "cmarin6051@gmail.com"
           git config --global user.name "cmarin001"
           git checkout -b cmarin/update-foundations-dependency
+          git pull origin cmarin/update-foundations-dependency
           git add package.json
           git commit -m "chore(dependencies): update foundations to latest version"
           git push origin cmarin/update-foundations-dependency
