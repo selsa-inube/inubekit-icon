@@ -37,12 +37,18 @@ jobs:
           git commit -m "chore(dependencies): update foundations to latest version"
           git push origin cmarin/update-foundations-dependency
     
-      - name: Install GitHub CLI
-        uses: actions/setup-gh@v2
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-
       - name: Create Pull Request
-        run: gh pr create --title "Update foundations dependency to latest version" --body "This PR updates the foundations dependency to the latest version." --base main --head cmarin/update-foundations-dependency
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: pullRequest } = await github.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "Update foundations dependency to latest version",
+              body: "This PR updates the foundations dependency to the latest version.",
+              head: "cmarin/update-foundations-dependency",
+              base: "main"
+            });
+            console.log(`Created pull request: ${pullRequest.html_url}`);
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
