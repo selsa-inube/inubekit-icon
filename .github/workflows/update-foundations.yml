@@ -28,7 +28,7 @@ jobs:
           git config --global user.name cmarin001
           git add package.json
           git commit -m "chore(dependencies): update foundations to latest version"
-          git push origin HEAD
+          git push origin update-foundations-dependency
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
@@ -37,4 +37,5 @@ jobs:
           commit-message: "chore(dependencies): update foundations to latest version"
           title: Update foundations dependency to latest version
           body: This PR updates the foundations dependency to the latest version.
-          branch: update-foundations-dependency
+          branch: cmarin/update-foundations-dependency
+          base: main
