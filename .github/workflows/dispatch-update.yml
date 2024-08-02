@@ -36,6 +36,7 @@ jobs:
             "selsa-inube/inubekit-button"
             "selsa-inube/inubekit-datefield"
             "selsa-inube/inubekit-flag"
+            "selsa-inube/inubekit-fullscreennav"
             "selsa-inube/inubekit-header"
             "selsa-inube/inubekit-nav"
             "selsa-inube/inubekit-select"
