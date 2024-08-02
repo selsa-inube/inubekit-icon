@@ -1,0 +1,40 @@
+name: Update Foundations
+
+on:
+  repository_dispatch:
+    types: [update-foundations]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Update Foundations Dependency
+        run: npm install @inubekit/foundations@latest
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email cmarin6051@gmail.com
+          git config --global user.name cmarin001
+          git add package.json package-lock.json
+          git commit -m "Update foundations dependency to latest version"
+          git push origin HEAD
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: Update foundations dependency to latest version
+          title: Update foundations dependency to latest version
+          body: This PR updates the foundations dependency to the latest version.
+          branch: update-foundations-dependency
