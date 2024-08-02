@@ -38,17 +38,14 @@ jobs:
           git push origin cmarin/update-foundations-dependency
     
       - name: Create Pull Request
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const { data: pullRequest } = await github.pulls.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: "Update foundations dependency to latest version",
-              body: "This PR updates the foundations dependency to the latest version.",
-              head: "cmarin/update-foundations-dependency",
-              base: "main"
-            });
-            console.log(`Created pull request: ${pullRequest.html_url}`);
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          curl -X POST \
+          -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/pulls \
+          -d '{
+            "title": "Update foundations dependency to latest version",
+            "body": "This PR updates the foundations dependency to the latest version.",
+            "head": "cmarin/update-foundations-dependency",
+            "base": "main"
+          }'
