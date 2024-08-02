@@ -62,13 +62,25 @@ jobs:
             -d '["dependencies", "minor"]'
 
       - name: Merge Pull Request
+        id: merge_pr
         run: |
           PR_NUMBER=$(echo $PR_URL | sed 's/[^0-9]*//g')
-          curl -s -X PUT \
+          MERGE_RESPONSE=$(curl -s -X PUT \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}/merge \
             -d '{
               "commit_title": "Auto-merge PR",
               "merge_method": "squash"
-            }'
+            }')
+          echo "MERGE_RESPONSE=${MERGE_RESPONSE}" >> $GITHUB_ENV
+          echo "MERGE_STATUS=$(echo ${MERGE_RESPONSE} | jq -r '.merged')" >> $GITHUB_ENV
+
+      - name: Delete Branch
+        if: ${{ env.MERGE_STATUS == 'true' }}
+        run: |
+          BRANCH="cmarin/update-foundations-dependency"
+          curl -s -X DELETE \
+            -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/git/refs/heads/${BRANCH}
