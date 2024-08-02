@@ -73,11 +73,11 @@ jobs:
               "commit_title": "Auto-merge PR",
               "merge_method": "squash"
             }')
-          echo "MERGE_RESPONSE=${MERGE_RESPONSE}" >> $GITHUB_ENV
-          echo "MERGE_STATUS=$(echo ${MERGE_RESPONSE} | jq -r '.merged')" >> $GITHUB_ENV
+          MERGE_STATUS=$(echo ${MERGE_RESPONSE} | jq -r '.merged')
+          echo "MERGE_STATUS=${MERGE_STATUS}" >> $GITHUB_ENV
 
       - name: Delete Branch
-        if: ${{ env.MERGE_STATUS == 'true' }}
+        if: env.MERGE_STATUS == 'true'
         run: |
           BRANCH="cmarin/update-foundations-dependency"
           curl -s -X DELETE \
