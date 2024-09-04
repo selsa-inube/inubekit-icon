@@ -96,7 +96,7 @@ const StyledIcon = styled.figure`
 
   & > svg:hover {
     cursor: ${({ $cursorHover, disabled, $variant }) => {
-      if (!disabled && $cursorHover && $variant !== "filled") return "pointer";
+      if (!disabled && $cursorHover) return "pointer";
     }};
 
     border-color: ${({
