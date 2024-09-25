@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-import { inube } from "@inubekit/foundations";
+import { tokens } from "./Tokens/tokens";
 
 const StyledIcon = styled.figure`
   display: inline-block;
@@ -22,22 +21,22 @@ const StyledIcon = styled.figure`
       if (disabled)
         return (
           theme?.icon?.[$appearance]?.contrast?.color?.disabled ||
-          inube.icon[$appearance].contrast.color.disabled
+          tokens[$appearance].contrast.color.disabled
         );
       if ($variant !== "filled") {
         if ($parentHover)
           return (
             theme?.icon?.[$appearance]?.content?.color?.hover ||
-            inube.icon[$appearance].content.color.hover
+            tokens[$appearance].content.color.hover
           );
         return (
           theme?.icon?.[$appearance]?.content?.color?.regular ||
-          inube.icon[$appearance].content.color.regular
+          tokens[$appearance].content.color.regular
         );
       }
       return (
         theme?.icon?.[$appearance]?.contrast?.color?.regular ||
-        inube.icon[$appearance].contrast.color.regular
+        tokens[$appearance].contrast.color.regular
       );
     }};
 
@@ -52,16 +51,16 @@ const StyledIcon = styled.figure`
         if (disabled)
           return (
             theme?.icon?.[$appearance]?.background?.color?.disabled ||
-            inube.icon[$appearance].background.color.disabled
+            tokens[$appearance].background.color.disabled
           );
         if ($parentHover)
           return (
             theme?.icon?.[$appearance]?.background?.color?.hover ||
-            inube.icon[$appearance].background.color.hover
+            tokens[$appearance].background.color.hover
           );
         return (
           theme?.icon?.[$appearance]?.background?.color?.regular ||
-          inube.icon[$appearance].background.color.regular
+          tokens[$appearance].background.color.regular
         );
       }
     }};
@@ -80,16 +79,16 @@ const StyledIcon = styled.figure`
       if (disabled)
         return (
           theme?.icon?.[$appearance]?.content?.color?.disabled ||
-          inube.icon[$appearance].content.color.disabled
+          tokens[$appearance].content.color.disabled
         );
       if ($parentHover && $variant !== "filled")
         return (
           theme?.icon?.[$appearance]?.content?.color?.hover ||
-          inube.icon[$appearance].content.color.hover
+          tokens[$appearance].content.color.hover
         );
       return (
         theme?.icon?.[$appearance]?.content?.color?.regular ||
-        inube.icon[$appearance].content.color.regular
+        tokens[$appearance].content.color.regular
       );
     }};
   }
@@ -109,7 +108,7 @@ const StyledIcon = styled.figure`
       if (!disabled && $cursorHover && $variant !== "filled")
         return (
           theme?.icon?.[$appearance]?.content?.color?.hover ||
-          inube.icon[$appearance].content.color.hover
+          tokens[$appearance].content.color.hover
         );
     }};
 
@@ -117,7 +116,7 @@ const StyledIcon = styled.figure`
       if (!disabled && $cursorHover && $variant !== "filled")
         return (
           theme?.icon?.[$appearance]?.content?.color?.hover ||
-          inube.icon[$appearance].content.color.hover
+          tokens[$appearance].content.color.hover
         );
     }};
 
@@ -131,7 +130,7 @@ const StyledIcon = styled.figure`
       if (!disabled && $variant === "filled" && $cursorHover)
         return (
           theme?.icon?.[$appearance]?.background?.color?.hover ||
-          inube.icon[$appearance].background.color.hover
+          tokens[$appearance].background.color.hover
         );
     }};
   }
