@@ -1,3 +1,15 @@
+# v2.16.0 (Wed Sep 25 2024)
+
+#### 🚀 Enhancement
+
+- Move icon tokens from foundations to component [#39](https://github.com/selsa-inube/inubekit-icon/pull/39) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.15.1 (Wed Sep 04 2024)
 
 #### ⚠️ Pushed to `main`
