@@ -1,3 +1,15 @@
+# v2.18.0 (Wed Oct 09 2024)
+
+#### 🚀 Enhancement
+
+- Refactor error handling to use console.error in onClick [#41](https://github.com/selsa-inube/inubekit-icon/pull/41) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v2.17.0 (Tue Oct 01 2024)
 
 #### 🚀 Enhancement
