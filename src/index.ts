@@ -6,3 +6,4 @@ export type {
   IIconSpacing,
   IIconVariant,
 } from "./Icon/props";
+export { tokens as IconTokens } from "./Icon/Tokens/tokens";
