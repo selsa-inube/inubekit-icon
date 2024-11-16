@@ -28,16 +28,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install",
-    "auto": "auto",
-    "changelog": "npm run auto changelog",
-    "version": "rm -rf dist && npm run build",
-    "release": "git push --follow-tags && npm run auto release",
-    "autorelease": "auto shipit"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@inubekit/foundations": "^5.11.3"
@@ -64,7 +55,6 @@
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
-    "auto": "^11.0.4",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -83,10 +73,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/selsa-inube/inubekit-icon.git"
-  },
-  "auto": {
-    "plugins": [
-      "npm"
-    ]
   }
 }
