@@ -1,34 +1,128 @@
-# IDS - Starter
+# Icon
 
-This project is a starter repository that can be used to develop and publish new Inube Design System components. With this repository the intention is that any design-system team member can start to develop a new component without starting from scratch.
+This library publishes the `<Icon />` component.
 
-## Readme
+## Installation
 
-This readme contains the details of usage of the starter. Once you create a new repo based in this template in github, please change the content of the README and make it relatable to the component you are creating.
+The library is publish in npm.
 
-## Instructions of usage
+```bash
+npm install @inubekit/icon
+```
 
-### Package.json
+## Dependencies
 
-1. **name**: As you can see in the package.json file, the name of this package is "ids-starter". Please rename the name when you start your new project. Remember that all components are publish by the @inubekit organization in npm, so rename the package as @inubekit/{new-component-name}
-2. **description**: Complete the description about the component you are creating.
+- **styled-components**: this library must be installed in your project in order to be able to use the component.
+- **react-icons**: This component is implemented using [react-icons](https://react-icons.github.io/react-icons/) as a dependency, since all the icons that can be rendered must belong to that library.
 
-### Environment variables
+## Import
 
-1. In order to control releases and package publishing, you will need to have a .env file with some environment variables.
-2. `GH_TOKEN`: Create this token in github.com, using your profile settings. This token requires the **repo** scope.
-3. `NPM_TOKEN`: Create this token in npmjs.com. You must ask the admin to add you as a organization admin prior to publish the package in npm.
+```jsx
+import { Icon } from "@inubekit/icon";
+```
 
-### Pull Requests
+## Props
 
-1. All PRs must have a semver label attached to it. This is the way the publishing and versioning process will use to know if a PR demands a major, minor or patch version to be created.
-2. To have these labels available, please run `npm run auto create-labels` to create them (you need to have already your `GH_TOKEN` in .env in order to make this command work).
+### icon
 
-### Publishing
+Use this prop to indicate which icon from react-icons you wish to render.
 
-Follow these steps to publish and release a new version of your package. Also check that you're an admin in the repository (validate with your team leader).
+**Note:** As a design rule, use icons from Material Design Icons _(md)_ only. The whole design system is based on that set of icons.
 
-1. `npm run changelog`: this command will create a changelog for you, including in the document the changes that the current release will publish in the new version of the package and what should be the version number of the release. The number is calculated using the labels of all the PRs that are included in this new version (see the Pull Requests details above).
-2. `npm version <new-version>`: this command makes multiple things. First, deletes the /dist folder in your project. Second, executes the build of the project and its files are stored in a new /dist folder. Third, creates a new version using the version number you pass in the command (use the version calculated in the changelog step). Fourth, executes a git push with the new version tag included. Fifth, creates a new release in Github. **This step requires that you have your `GH_TOKEN` working**.
-3. `npm login`: you must be logged in with npm to continue the process.
-4. `npm publish`: with the new build already in /dist, you can now execute this command and the new package version will be published in npm. **This command requires tat you have you `NPM_TOKEN` working.**
+```jsx
+import { Icon } from "@inubekit/icon";
+import { MdAdd } from "react-icons/md";
+
+function Example() {
+  return (
+    <>
+      <Icon icon={<MdAdd />} />
+    </>
+  );
+}
+```
+
+### appearance (required)
+
+Controls the color of the rendered icon. This prop implements the IIconAppearance interface which controls that you can only use the following set of options:
+
+`"primary" | "success" | "warning" | "danger" | "help" | "dark" | "gray" | "light"`
+
+Each option has a default color value implemented and exported from `@inubekit/foundations` to be used inside the styles of the component. Check the [personalization](#personalization) section to see how to change these defaults.
+
+### size (optional)
+
+Control the size of the icon using any dimensional value you need. Consider:
+
+1. **default**: "24px".
+2. You can pass any string as long as it is a valid value for `width` and `height` CSS properties.
+3. You will see below that you can change the variant, shape and spacing props of the icon. Regardless of those values, the whole icon will use the size you specify in this prop (just like working with the `box-sizing: "border-box"` CSS property)
+
+### variant (optional)
+
+Icons may require a frame sometimes. This prop implements the IIconVariant interface so you control that frame with three possible values:
+
+- `"empty"` **(default)**: The icon is rendered alone. Just the icon and nothing else.
+- `"outlined"`: Use this value if the icon should be surrounded with a border. The border uses the same color as the icon.
+- `"filled"`: Use this value if you want the icon to be on top of a solid background. In this case, the [appearance](#appearance-required) you selected will affect the background color and the icon will use a contrast color on top.
+
+### shape (optional)
+
+Derived from the variant prop, in some scenarios we may want to change the shape of the icon's frame. This prop implements the IIconShape interface so you can use the following shapes:
+
+- `"rectangle"` **(default)**
+- `"circle"`
+
+### spacing (optional)
+
+Some icons have an internal implementation that causes the icon to be close or almost touch the border of its container. This can become a frequent issue when you implement a frame around the icon. For these scenarios, the spacing prop implements the IIconSpacing interface so you can control the space between the icon and its container like this:
+
+- `narrow` **(default)**: There is a "2px" padding between the icon and its container.
+- `compact`: There is a "4px" padding.
+- `wide`: There is a "8px" padding.
+
+### disabled (optional)
+
+This is a boolean prop to control whether the icon should be disabled or not. There are some default styling values when the icon is disabled, if you want to change them check the [personalization](#personalization) section.
+
+### onClick (optional)
+
+This prop gets a function that will be executed when the user click on the icon (if the icon is enabled). The function will get the click event as an argument when executed.
+
+### cursorHover (optional)
+
+Boolean prop that lets you enable a hover behavior for the icon. This will change the cursor when the icon is hovered as well as the color of the icon (and its frame if it has one). Its **default** value is `false`.
+
+### parentHover (optional)
+
+Sometimes the icon belongs to a bigger component and we want to change the rendering of the icon to a hover state even when the cursor is over the bigger component but not exactly over the icon itself.
+
+- **default**: `false`
+- This behavior is common when that bigger component is a card. In that case we would like to change the icon to its hover state when the cursor is over the card.
+- Its usage means that the parent component of the icon will have to intercept the hover on itself and then change the `parentHover` prop value to `true`.
+- While `cursorHover` let's the icon intercept the hover by the itself using its own CSS rules for that, `parentHover` is a controlled prop that forces the hover behavior on the icon.
+
+## Personalization
+
+### Token structure
+
+The tokens for this component follow the structure `business-unit.component.appearance.property.subproperty.modifier`.
+
+### Properties
+
+- **content**: used to control the color of the icon.
+- **background**: used to control the background of the icon when the `filled` variant applies.
+- **contrast**: used to control the color of the icon when the `filled` variant applies.
+
+### Tokens
+
+You can check the list of tokens in [TOKENS.md](./TOKENS.md)
+
+### Changing tokens
+
+You can change the presentation of the component by adjusting its tokens. This modification has the next constraints:
+
+1. You must use the current token structure, since the component styling relies on that data structure to get the values.
+2. The tokens rely on the palette token structure. This means that the business unit should already have a set of colors defined as a palette and those colors serve as options to be assigned here.
+
+> 💡 To see more details about the palette token structure check **@ınubekit/foundations**.

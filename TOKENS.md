@@ -1,0 +1,79 @@
+# Tokens
+
+**values**: used when the token is equal to a literal value.
+**reference**: used when the tokes points to another token.
+
+| token                                        | value | reference                  |
+| -------------------------------------------- | ----- | -------------------------- |
+| inube.icon.primary.content.color.regular     |       | inube.palette.blue.b400    |
+| inube.icon.primary.content.color.disabled    |       | inube.palette.neutral.n90  |
+| inube.icon.primary.content.color.hover       |       | inube.palette.blue.b300    |
+| inube.icon.primary.background.color.regular  |       | inube.palette.blue.b400    |
+| inube.icon.primary.background.color.disabled |       | inube.palette.neutral.n20  |
+| inube.icon.primary.background.color.hover    |       | inube.palette.blue.b300    |
+| inube.icon.primary.contrast.color.regular    |       | inube.palette.neutral.n10  |
+| inube.icon.primary.contrast.color.disabled   |       | inube.palette.neutral.n90  |
+| inube.icon.primary.contrast.color.hover      |       | inube.palette.neutral.n10  |
+| inube.icon.success.content.color.regular     |       | inube.palette.green.g400   |
+| inube.icon.success.content.color.disabled    |       | inube.palette.neutral.n90  |
+| inube.icon.success.content.color.hover       |       | inube.palette.green.g300   |
+| inube.icon.success.background.color.regular  |       | inube.palette.green.g400   |
+| inube.icon.success.background.color.disabled |       | inube.palette.neutral.n20  |
+| inube.icon.success.background.color.hover    |       | inube.palette.green.g300   |
+| inube.icon.success.contrast.color.regular    |       | inube.palette.neutral.n10  |
+| inube.icon.success.contrast.color.disabled   |       | inube.palette.neutral.n90  |
+| inube.icon.success.contrast.color.hover      |       | inube.palette.neutral.n10  |
+| inube.icon.warning.content.color.regular     |       | inube.palette.yellow.y400  |
+| inube.icon.warning.content.color.disabled    |       | inube.palette.neutral.n90  |
+| inube.icon.warning.content.color.hover       |       | inube.palette.yellow.y300  |
+| inube.icon.warning.background.color.regular  |       | inube.palette.yellow.y400  |
+| inube.icon.warning.background.color.disabled |       | inube.palette.neutral.n20  |
+| inube.icon.warning.background.color.hover    |       | inube.palette.yellow.y300  |
+| inube.icon.warning.contrast.color.regular    |       | inube.palette.neutral.n10  |
+| inube.icon.warning.contrast.color.disabled   |       | inube.palette.neutral.n90  |
+| inube.icon.warning.contrast.color.hover      |       | inube.palette.neutral.n10  |
+| inube.icon.danger.content.color.regular      |       | inube.palette.red.r400     |
+| inube.icon.danger.content.color.disabled     |       | inube.palette.neutral.n90  |
+| inube.icon.danger.content.color.hover        |       | inube.palette.red.r300     |
+| inube.icon.danger.background.color.regular   |       | inube.palette.red.r400     |
+| inube.icon.danger.background.color.disabled  |       | inube.palette.neutral.n20  |
+| inube.icon.danger.background.color.hover     |       | inube.palette.red.r300     |
+| inube.icon.danger.contrast.color.regular     |       | inube.palette.neutral.n10  |
+| inube.icon.danger.contrast.color.disabled    |       | inube.palette.neutral.n90  |
+| inube.icon.danger.contrast.color.hover       |       | inube.palette.neutral.n10  |
+| inube.icon.help.content.color.regular        |       | inube.palette.purple.p400  |
+| inube.icon.help.content.color.disabled       |       | inube.palette.neutral.n90  |
+| inube.icon.help.content.color.hover          |       | inube.palette.purple.p300  |
+| inube.icon.help.background.color.regular     |       | inube.palette.purple.p400  |
+| inube.icon.help.background.color.disabled    |       | inube.palette.neutral.n20  |
+| inube.icon.help.background.color.hover       |       | inube.palette.purple.p300  |
+| inube.icon.help.contrast.color.regular       |       | inube.palette.neutral.n10  |
+| inube.icon.help.contrast.color.disabled      |       | inube.palette.neutral.n90  |
+| inube.icon.help.contrast.color.hover         |       | inube.palette.neutral.n10  |
+| inube.icon.dark.content.color.regular        |       | inube.palette.neutral.n900 |
+| inube.icon.dark.content.color.disabled       |       | inube.palette.neutral.n90  |
+| inube.icon.dark.content.color.hover          |       | inube.palette.neutral.n500 |
+| inube.icon.dark.background.color.regular     |       | inube.palette.neutral.n900 |
+| inube.icon.dark.background.color.disabled    |       | inube.palette.neutral.n20  |
+| inube.icon.dark.background.color.hover       |       | inube.palette.neutral.n500 |
+| inube.icon.dark.contrast.color.regular       |       | inube.palette.neutral.n10  |
+| inube.icon.dark.contrast.color.disabled      |       | inube.palette.neutral.n90  |
+| inube.icon.dark.contrast.color.hover         |       | inube.palette.neutral.n10  |
+| inube.icon.gray.content.color.regular        |       | inube.palette.neutral.n300 |
+| inube.icon.gray.content.color.disabled       |       | inube.palette.neutral.n90  |
+| inube.icon.gray.content.color.hover          |       | inube.palette.neutral.n100 |
+| inube.icon.gray.background.color.regular     |       | inube.palette.neutral.n20  |
+| inube.icon.gray.background.color.disabled    |       | inube.palette.neutral.n20  |
+| inube.icon.gray.background.color.hover       |       | inube.palette.neutral.n30  |
+| inube.icon.gray.contrast.color.regular       |       | inube.palette.neutral.n900 |
+| inube.icon.gray.contrast.color.disabled      |       | inube.palette.neutral.n90  |
+| inube.icon.gray.contrast.color.hover         |       | inube.palette.neutral.n900 |
+| inube.icon.light.content.color.regular       |       | inube.palette.neutral.n10  |
+| inube.icon.light.content.color.disabled      |       | inube.palette.neutral.n90  |
+| inube.icon.light.content.color.hover         |       | inube.palette.neutral.n0   |
+| inube.icon.light.background.color.regular    |       | inube.palette.neutral.n10  |
+| inube.icon.light.background.color.disabled   |       | inube.palette.neutral.n20  |
+| inube.icon.light.background.color.hover      |       | inube.palette.neutral.n0   |
+| inube.icon.light.contrast.color.regular      |       | inube.palette.neutral.n900 |
+| inube.icon.light.contrast.color.disabled     |       | inube.palette.neutral.n90  |
+| inube.icon.light.contrast.color.hover        |       | inube.palette.neutral.n900 |
