@@ -1,3 +1,11 @@
+# v2.18.2 (Fri Nov 29 2024)
+
+This release improves the documentation for the library in the README.md file. Also documents the token structure and values for the component and adds a build step in pre-commit to ensure the build keeps working after each commit.
+
+- docs: update README
+- docs: add TOKENS table
+- feat: run build in pre-commit
+
 # v2.18.1 (Thu Oct 10 2024)
 
 - Update index.ts
